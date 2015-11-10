@@ -13,17 +13,15 @@
     http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
     http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util-4.2.xsd">
-	<!-- 加载包中的controller  注解扫描包 -->
-	<context:component-scan base-package="com.huixw.web.*"/>
-	<context:annotation-config />
 	
+	<!-- 加载包中的controller  注解扫描包 -->
+	<context:annotation-config />
     <bean id="propertyConfigs" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
        <property name="locations">
            <list>
                <value>classpath:db.properties</value>
            </list>
        </property>
-    </bean>
-	
+    </bean>	
 	
 </beans>
