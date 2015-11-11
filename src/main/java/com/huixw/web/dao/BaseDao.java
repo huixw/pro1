@@ -14,27 +14,27 @@ import com.huixw.web.common.Pagination;
 public class BaseDao {
 	
 	@Autowired
-	SqlSessionTemplate sqlSession;
+	SqlSessionTemplate sqlSessionTemplate;
 	
 	public int insert(String statement,Object entity) {
-		return sqlSession.insert(statement, entity);
+		return sqlSessionTemplate.insert(statement, entity);
 	}
 	
 	public int update(String statement,Object entity) {
-		return sqlSession.update(statement, entity);
+		return sqlSessionTemplate.update(statement, entity);
 	}
 	
 	public int delete(String statement, Object id) {
-		return sqlSession.delete(statement, id);
+		return sqlSessionTemplate.delete(statement, id);
 	}
 	
 	public <E> List<E> query(String statement, Object entity){
-		return sqlSession.selectList(statement, entity);
+		return sqlSessionTemplate.selectList(statement, entity);
 	}
 	
 	public <T> Pagination<T> queryPagination(String statement,Object example,Pagination<T> pagination) {
 		PageHelper.startPage(pagination.getPn(), pagination.getPs());
-		List<T> data = sqlSession.selectList(statement, example);
+		List<T> data = sqlSessionTemplate.selectList(statement, example);
 		PageInfo<T> page = new PageInfo<T>(data);
 		pagination.setData(data);
 		pagination.setTotalCount(page.getTotal());
@@ -42,11 +42,11 @@ public class BaseDao {
 	}
 
 	public SqlSessionTemplate getSqlSession() {
-		return sqlSession;
+		return sqlSessionTemplate;
 	}
 
 	public void setSqlSession(SqlSessionTemplate sqlSession) {
-		this.sqlSession = sqlSession;
+		this.sqlSessionTemplate = sqlSession;
 	}
 	
 }

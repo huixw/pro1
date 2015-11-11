@@ -16,6 +16,6 @@
 		</plugin>
 	</plugins>
     <mappers>  
-        <mapper resource="mybatis/mapper/UserMapper.xml"/>  
+    	<package name="com.huixw.web.mapper"/>
     </mappers>  
 </configuration>
