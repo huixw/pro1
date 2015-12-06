@@ -1,4 +1,4 @@
-package com.huixw.web;
+package com.huixw.web.service;
 
 import org.junit.After;
 import org.junit.Before;

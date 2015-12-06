@@ -13,6 +13,7 @@ import com.huixw.web.common.Pagination;
 import com.huixw.web.dao.BaseDao;
 import com.huixw.web.entity.User;
 import com.huixw.web.entity.UserExample;
+import com.huixw.web.service.IUserService;
 
 @Controller
 public class IndexController extends BaseController {
@@ -21,6 +22,9 @@ public class IndexController extends BaseController {
 	
 	@Autowired
 	BaseDao baseDao;
+	
+	@Autowired
+	IUserService userService;
 	
 	@RequestMapping(value={"/index","/"})
 	public ModelAndView index(){
@@ -33,17 +37,13 @@ public class IndexController extends BaseController {
 		Pagination<User> pagination = new Pagination<User>();
 		pagination.setPn(2);
 		pagination.setPs(1);
-		pagination =  baseDao.queryPagination("user.selectByExample", example, pagination);
+		pagination =  baseDao.queryPagination("com.huixw.web.mapper.UserMapper.selectByExample", example, pagination);
 		List<User> users = pagination.getData();
 		for(User user : users) {
 			logger.info(user.getName());
 			logger.info(""+pagination.getTotalCount());
 		}
-		User user = new User();
-		user.setName("aaaaaaa");
-		user.setAge(111);
-		user.setRemark("1111");
-		baseDao.insert("user.insert", user);
+		userService.addUsers(null);
 		return modelAndView;
 	}
 }

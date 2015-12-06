@@ -11,7 +11,9 @@
     http://www.springframework.org/schema/mvc 
     http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 	
-	<context:component-scan base-package="com.huixw.web"/>
+	<context:component-scan base-package="com.huixw.web.controller"/>
+	<mvc:annotation-driven/>
+	
 	<!-- 静态资源的访问 -->
 	<mvc:resources location="/static/" mapping="/static/**"/>
 	
@@ -45,5 +47,4 @@
         <property name="exposeRequestAttributes" value="true" />
         <property name="exposeSessionAttributes" value="true" />
     </bean>
-    <mvc:annotation-driven/>
 </beans>

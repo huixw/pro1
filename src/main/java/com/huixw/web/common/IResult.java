@@ -13,8 +13,8 @@ public class IResult<T> {
 		this.data = data;
 	}
 	
-	public static <W> IResult<W> createSucc(W data) {
-		return new IResult<W>(CommonCode.RespCode.sucess, data);
+	public static <D> IResult<D> createSucc(D data) {
+		return new IResult<D>(CommonCode.RespCode.sucess, data);
 	}
 	
 	public CommonCode.RespCode getCode(){

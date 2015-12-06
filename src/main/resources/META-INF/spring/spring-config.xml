@@ -15,6 +15,7 @@
     http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 	
 	<!-- 加载包中的controller  注解扫描包 -->
+	<context:component-scan base-package="com.huixw.web"/>
 	<context:annotation-config />
     <bean id="propertyConfigs" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
        <property name="locations">

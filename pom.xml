@@ -156,6 +156,15 @@
 			<version>${spring-version}</version>
 		</dependency>
 		<!-- 单元测试使用 end -->
+		
+		<!-- 工具包  -->
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.8</version>
+		</dependency>
+		
+		<!-- 工具包 end -->
 
     </dependencies>
     
@@ -197,6 +206,7 @@
 					<stopPort>9701</stopPort>
 					<stopKey>foo</stopKey>
 					<scanIntervalSeconds>0</scanIntervalSeconds>
+					 <contextXml>${project.basedir}/src/main/resources/jetty-context.xml</contextXml> 
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
 							<port>9700</port>

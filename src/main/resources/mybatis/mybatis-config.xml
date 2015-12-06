@@ -15,7 +15,4 @@
 			<property name="rowBoundsWithCount" value="true"/>
 		</plugin>
 	</plugins>
-    <mappers>  
-    	<package name="com.huixw.web.mapper"/>
-    </mappers>  
 </configuration>

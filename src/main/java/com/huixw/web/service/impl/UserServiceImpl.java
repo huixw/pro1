@@ -23,18 +23,17 @@ public class UserServiceImpl implements IUserService {
 	UserMapper userMapper;
 	
 	public IResult<Boolean> addUser(User user) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	
-	@Transactional(propagation = Propagation.REQUIRED)
+	@Transactional(
+		propagation = Propagation.REQUIRED,
+		rollbackFor = Exception.class
+		)
 	public IResult<Boolean> addUsers(List<User> users) {
-		User user = new User();
-		user.setName("ÀîËÄ");
-		user.setAge(22);
-		user.setRemark("aaa");
-		userMapper.insert(user);
-		return null;
+		
+		return IResult.createSucc(true);
 	}
 
 }
