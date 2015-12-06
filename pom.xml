@@ -185,7 +185,7 @@
     			<activeByDefault>true</activeByDefault>
     		</activation>
     		<properties>
-    			<profile>dev</profile>
+    			<profileId>dev</profileId>
     		</properties>
     	</profile>
     </profiles>
@@ -200,7 +200,7 @@
 				</includes> 
 			</resource>
 			<resource>
-				<directory>src/main/profiles/{profile}</directory>
+				<directory>src/main/profiles/{profileId}</directory>
 				<includes>
 					<include>**/*</include>
 				</includes>
