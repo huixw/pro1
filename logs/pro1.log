@@ -292,3 +292,15 @@
 42065 [qtp857278589-19] DEBUG c.h.web.mapper.UserMapper.insert - <==    Updates: 1
 42065 [qtp857278589-19] DEBUG c.h.web.mapper.UserMapper.insert - ==>  Preparing: insert into user (id, name, age, remark) values (?, ?, ?, ?) 
 42067 [qtp857278589-19] DEBUG c.h.web.mapper.UserMapper.insert - ==> Parameters: 0(Long), aaaabbc11aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(String), 22(Integer), aaa(String)
+32576 [qtp315251629-19] INFO  c.h.web.controller.IndexController - index|begin
+6059 [qtp913846414-15] INFO  c.h.web.controller.IndexController - index|begin
+6211 [qtp315251629-16] INFO  c.h.web.controller.IndexController - index|begin
+4817 [qtp727720046-20] INFO  c.h.web.controller.IndexController - index|begin
+199537 [qtp727720046-17] INFO  c.h.web.controller.IndexController - index|begin
+200509 [qtp727720046-16] INFO  c.h.web.controller.IndexController - index|begin
+201067 [qtp727720046-19] INFO  c.h.web.controller.IndexController - index|begin
+201595 [qtp727720046-16] INFO  c.h.web.controller.IndexController - index|begin
+202069 [qtp727720046-19] INFO  c.h.web.controller.IndexController - index|begin
+202620 [qtp727720046-16] INFO  c.h.web.controller.IndexController - index|begin
+203208 [qtp727720046-20] INFO  c.h.web.controller.IndexController - index|begin
+325941 [qtp727720046-17] INFO  c.h.web.controller.IndexController - index|begin
